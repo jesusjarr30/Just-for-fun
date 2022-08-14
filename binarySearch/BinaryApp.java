@@ -30,7 +30,7 @@ public class BinaryApp {
 		int index;
 		index=v.binarySearch(target);
 		System.out.println("the index is "+index);
-		System.out.println(" the target is "+target+" if we search int the vectore"+nums[index]);
+		System.out.println(" the target is "+target+" if we search in the list"+nums[index]);
 		
 		}
 	private int binarySearch(int target) {
@@ -51,7 +51,7 @@ public class BinaryApp {
 			}else {
 				left=index+1;
 			}
-			System.out.println("left side "+left +" right side"+right+" index is "+index);
+			//System.out.println("left side "+left +" right side"+right+" index is "+index);
 		}
 		return index;
 		
