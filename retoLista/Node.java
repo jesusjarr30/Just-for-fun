@@ -23,7 +23,7 @@ public class Node {
 
     //setter method
 
-    public void SetNext(Node next){
+    public void setNext(Node next){
         this.next=next;
     }
     public void setAfter(Node after){
