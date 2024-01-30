@@ -49,11 +49,8 @@ public class main {
         Arrays.sort(arreglo);
         int indice=0;
         int indice2=0;
-        for(int i= 0;i<tarject;i++){
-            indice= Arrays.bi
-        }
-    }
 
+    }
     private static void PrimerRepetido() {
         String palabra="sfjdfhOHJIOJK";
         HashSet<Character> ch= new HashSet<>();
@@ -117,7 +114,6 @@ public class main {
         }
         aux=aux/lista.size();
         System.out.println("Promedio por arrayList "+aux);
-
         aux=0;
         for(Integer elemento: arreglo){
             aux+=elemento+aux;
@@ -137,7 +133,7 @@ public class main {
                 i--;
             }
         }
-        System.out.println("El resultado de la lista es elsiguiente");
+        System.out.println("El resultado de la lista es el siguiente");
 
         for(Integer element : lista){
             System.out.println(element);
