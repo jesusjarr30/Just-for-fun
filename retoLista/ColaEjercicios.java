@@ -18,6 +18,5 @@ public class ColaEjercicios {
         System.out.println(a.peek());//solo obitne el elemento alfrente de la lista
         System.out.println(a.poll());//recupera y elimina de la lista
         System.out.println(a.size());
-
     }
 }
