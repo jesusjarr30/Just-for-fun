@@ -12,6 +12,7 @@ public class mainTree {
         TreeTree tree= new TreeTree();
         PrintTreeMenu menu= new PrintTreeMenu();
 
+
         do{
             opc=menu.printMenu(sc);
             switch (opc){
