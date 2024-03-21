@@ -33,8 +33,6 @@ public class GridChallenge {
                 if(grid.get(i).charAt(aux)<grid.get(i).charAt(aux)){
                     result=false;
                 }
-
-
             }
             if(result==false){
                 break;
