@@ -23,9 +23,11 @@ public class ClientHandler implements Runnable {
         } catch (IOException e) {
             closeEverything(socket, bufferedReader, bufferedWriter);
         }
-
     }
 
+    private String getClienUserName() {
+        return this.clienUserName;
+    }
 
     //este metodo se pone por defecto
     @Override
@@ -43,8 +45,6 @@ public class ClientHandler implements Runnable {
                 break;
             }
         }
-
-
     }
 
     public void broadcastMessage(String message) {

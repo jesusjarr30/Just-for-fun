@@ -35,11 +35,7 @@ public class Client {
                 bufferedWriter.write(username + ": " + messageToSend);
                 bufferedWriter.newLine();
                 bufferedWriter.flush();
-
-
             }
-
-
         } catch (IOException e) {
             closeEverything(socket, bufferedReader, bufferedWriter);
         }

@@ -15,7 +15,6 @@ public class Server {
     }
 
     public void startServer() {
-
         try {
             while (!ServerSocket.isClosed()) {
                 //el accept es un metodo en el que el socke queda esperando a que un cliente se conecte
@@ -28,7 +27,7 @@ public class Server {
             }
 
         } catch (IOException e) {
-
+            e.printStackTrace();
         }
     }
 
