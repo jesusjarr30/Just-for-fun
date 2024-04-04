@@ -7,7 +7,6 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Cliente {
-
     private Socket socket;
     private BufferedWriter bufferedWriter;
     private BufferedReader bufferedReader;
