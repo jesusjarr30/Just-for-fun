@@ -1,30 +1,38 @@
 package challenge.doublelinked;
 
 public class Node {
-    private Node next;
     private Node before;
+    private Node next;
     private int number;
-    Node (Node next, Node before, int number){
-        this.next=next;
-        this.before=before;
-        this.number=number;
+
+    public Node(Node before, Node next, int number) {
+        this.before = before;
+        this.next = next;
+        this.number = number;
+
     }
-    public void setNext(Node next){
-        this.next=next;
+
+    public Node getBefore() {
+        return before;
     }
-    public void setBefore(Node before){
-        this.before=before;
-    }
-    public void setNumber(int number){
-    this.number=number;
-    }
-    public int getNumber(){
-        return number;
-    }
-    public Node getNext(){
+
+    public Node getNext() {
         return next;
     }
-    public Node getBefore(){
-        return before;
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setBefore(Node before) {
+        this.before = before;
+    }
+
+    public void setNext(Node next) {
+        this.next = next;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 }

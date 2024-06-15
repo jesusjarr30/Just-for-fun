@@ -3,35 +3,59 @@ package challenge.doublelinked;
 import java.util.Scanner;
 
 public class main {
-    public static void  main(String[] args){
+    public static void main(String[] args) {
+        int opc = 0;
+        int aux = 0;
         Scanner sc = new Scanner(System.in);
-        int opc=0;
-        int number;
-        LinkedList lista= new LinkedList();
-        System.out.println("Lista doble");
-        do{
-            System.out.println("1. Agregar a la lista");
-            System.out.println("2. Imprimir la lista");
-            System.out.println("3. Eliminar por numero");
-            System.out.println("4. Salir");
-            opc= Integer.parseInt(sc.nextLine());
-            switch (opc){
-                case 1:
-                    System.out.println("Ingresa el numero que se desea ");
-                    number= Integer.parseInt(sc.nextLine());
-                    lista.add(number);
-                break;
+        LinkedList lista = new LinkedList();
 
+        do {
+            System.out.println("1. Agregar elemento a la lista");
+            System.out.println("2. Eliminar nodo de la lista");
+            System.out.println("3. Buscar un elemento de la lista");
+            System.out.println("4. imprimir la lista");
+            System.out.println("5. Salir de la aplicacion");
+
+            try {
+                opc = Integer.parseInt(sc.nextLine());
+            } catch (Exception e) {
+                System.out.println("Solo se admiten numeros en este aparado");
+                opc = 0;
+            }
+            switch (opc) {
+                case 1:
+                    System.out.println("Ingrese el numero que desea entrar");
+                    try {
+                        aux = Integer.parseInt(sc.nextLine());
+                    } catch (Exception e) {
+                        System.out.println("Solo se admite numeros");
+                    }
+                    lista.addNode(aux);
+                    break;
                 case 2:
-                lista.printLinked();
+                    System.out.println("Eliminar Nodo de la lista");
+                    try {
+                        aux = Integer.parseInt(sc.nextLine());
+                    } catch (Exception e) {
+                        System.out.println("Solo se admite numeros");
+                    }
+
                     break;
                 case 3:
-                    System.out.println("Ingresa el numero que se desea eliminar ");
-                    number= Integer.parseInt(sc.nextLine());
-                    lista.delete(number);
+                    System.out.println("Buscar nodo en la lista ");
+                    try {
+                        aux = Integer.parseInt(sc.nextLine());
+                    } catch (Exception e) {
+                        System.out.println("Solo se admite numeros");
+                    }
+                    break;
+                case 4:
+                    break;
 
-                break;
             }
-        }while(opc!=4);
+
+        } while (opc != 5);
+
+
     }
 }

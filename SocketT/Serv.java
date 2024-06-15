@@ -22,7 +22,6 @@ public class Serv {
         while (!serverSocket.isClosed()) {
             System.out.println("Servidor a la espera de clientes");
             serverSocket.accept();
-
         }
     }
 
@@ -30,7 +29,6 @@ public class Serv {
         if (serverSocket != null) {
             serverSocket.close();
         }
-
     }
 
     public static void main(String[] args) throws IOException {
@@ -42,7 +40,6 @@ public class Serv {
     }
 
     public static class ServAux {
-
         private Socket socket;
         private BufferedWriter bufferedWriter;
         private BufferedReader bufferedReader;

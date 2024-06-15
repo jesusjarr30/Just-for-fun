@@ -12,6 +12,7 @@ public class ClientHandler implements Runnable {
     private BufferedWriter bufferedWriter;//para poder escribir mensajes
     private String clienUserName;
 
+
     public ClientHandler(Socket socket) {
         try {
             this.socket = socket;

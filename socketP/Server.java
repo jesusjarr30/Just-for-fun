@@ -10,6 +10,7 @@ public class Server {
     //parece que esto sera para nuesta conexion
     private ServerSocket ServerSocket;
 
+
     public Server(ServerSocket ServerSocket) {
         this.ServerSocket = ServerSocket;
     }
@@ -21,7 +22,6 @@ public class Server {
                 Socket socket = ServerSocket.accept();
                 System.out.println("New client has connected");
                 ClientHandler cliendHandler = new ClientHandler(socket);
-
                 Thread thread = new Thread(cliendHandler);
                 thread.start();
             }

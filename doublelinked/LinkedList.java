@@ -3,45 +3,63 @@ package challenge.doublelinked;
 public class LinkedList {
     private Node first;
 
-    LinkedList(){
-        first=null;
-
+    public LinkedList() {
+        first = null;
     }
-    public void add(int number){
-        if(first==null){
-            first=new Node(null,null,number);
 
-        }else{
-            Node aux=new Node(first,null,number);
-            first.setBefore(aux);
-            first=aux;
+    public void addNode(int number) {
+
+        if (first == null) {
+            first = new Node(null, null, number);
+        } else {
+            Node aux = first;
+            while (aux.getNext() != null) {
+                aux = aux.getNext();
+            }
+            aux.setNext(new Node(aux, null, number));
         }
 
     }
-    public void printLinked(){
-        Node aux=first;
-        while(aux!=null){
-            System.out.println(aux.getNumber());
-            aux=aux.getNext();
-        }
 
-    }
-    public void delete(int number){
-        Node aux= first;
-        Node auxBefore=null;
-        Node auxNext=null;
+    public void eliminarNode(int number) {
+        Node aux = first;
+        while (aux != null) {
+            if (aux.getNumber() == number) {
+                Node anterior = aux.getBefore();
+                Node siguiente = aux.getNext();
+                if (anterior != null) {
+                    siguiente.setBefore(anterior);
 
-        while(aux!=null){
-            if(aux.getNumber()==number){
-                //si eontro coincidencias
-                auxBefore=aux.getBefore();
-                auxNext=aux.getNext();
-                auxBefore.setNext(auxNext);
-                auxNext.setBefore(auxBefore);
+                    if (siguiente != null) {
+                        anterior.setNext(siguiente);
+                    }
+                    aux = aux.getNext();
+                }
                 break;
             }
-            aux=aux.getNext();
         }
 
     }
+
+    public void buscarNode(int number) {
+
+        Node aux = first;
+        while (aux != null) {
+            if (aux.getNumber() == number) {
+                System.out.println("El numero " + number + " Si se encutra en la lista");
+                break;
+            }
+            aux = aux.getNext();
+        }
+    }
+
+    public void printNodes() {
+        Node aux = first;
+        while (aux != null) {
+            System.out.println("EL numero es: " + aux.getNumber());
+            aux = aux.getNext();
+        }
+
+    }
+
 }

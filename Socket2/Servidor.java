@@ -37,9 +37,7 @@ public class Servidor {
             }
         } catch (IOException e) {
             e.printStackTrace();
-
         }
-
     }
 
     public static void main(String[] args) throws IOException {
@@ -112,7 +110,6 @@ public class Servidor {
             } catch (IOException e) {
                 closeEverything(socket, bufferedReader, bufferedWriter);
             }
-
         }
 
         public void closeEverything(Socket socket, BufferedReader bufferedReader, BufferedWriter bufferedWriter) {

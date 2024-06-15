@@ -56,7 +56,6 @@ public class Cliente {
                         closeEverything(socket, bufferedReader, bufferedWriter);
                     }
                 }
-
             }
         }).start();
     }
